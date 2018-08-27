@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Consumer } from '../context';
+import { Consumer } from '../../context';
 
 class Contact extends Component {
   state = {
@@ -38,18 +38,24 @@ class Contact extends Component {
                 <i
                   className="fas fa-sort-down"
                   onClick={this.onShowClick.bind(this)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer'
+                  }}
                 />
                 <i
                   className="fas fa-times"
-                  style={{ cursor: 'pointer', float: 'right', color: 'red' }}
+                  style={{
+                    cursor: 'pointer',
+                    float: 'right',
+                    color: 'red'
+                  }}
                   onClick={this.onDeleteClick.bind(this, id, dispatch)}
                 />
               </h4>
               {showContactInfo ? (
                 <ul className="list-group">
-                  <li className="list-group-item">{email}</li>
-                  <li className="list-group-item">{phone}</li>
+                  <li className="list-group-item"> {email} </li>
+                  <li className="list-group-item"> {phone} </li>
                 </ul>
               ) : null}
             </div>
